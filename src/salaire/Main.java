@@ -1,6 +1,8 @@
 package salaire;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Main {
 
@@ -10,9 +12,10 @@ public class Main {
 		
 		listEmp.add(new Instractor("John", 50));
 		listEmp.add(new Manager("Eric", 22, 150));
-		for (Employee employee : listEmp) {
-			System.out.println(employee);
-		}
+		
+		Collections.sort(listEmp, Comparator.reverseOrder());
+		
+		System.out.println(listEmp);
 
 	}
 
